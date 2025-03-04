@@ -1,0 +1,5 @@
+# Ignore all .git files
+*.git
+
+# Ignore all files in any directory named temp
+temp/

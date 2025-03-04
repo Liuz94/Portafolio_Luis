@@ -2,12 +2,12 @@
     display: flex;
     width: 90%;
     max-width: 1500px;
-    /*background-image: url(images/header-bg.jpg);*/
+    background-image: url(images/header-bg.jpg);
     height: 80vh; /* Ajusta la altura según necesidad */
     border-radius: 10px;
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    z-index: -2; /* Coloca la sombra detrás del texto */
+    z-index: 1; /* Coloca la sombra detrás del texto */
 
 }
 
@@ -22,7 +22,6 @@
 .text {
     flex-direction: column;
     text-align: center;
-    z-index: 1; /* Coloca la sombra detrás del texto */
 
 }
 
@@ -73,10 +72,11 @@
     color: #333;
     font-size: 50px; /* Tamaño de los iconos aumentado */
     transition: 0.3s;
+
 }
 
 .social-links a:hover {
-    color: #0077B5; /* Azul LinkedIn por defecto */
+    color: #0077B5 !important; /* Azul LinkedIn por defecto */
 }
 
 .social-links a.github:hover {
@@ -88,9 +88,6 @@
 }
 
 
-.contact-links a i {
-    color: rgb(255, 255, 255); /* Color blanco para los iconos */
-}
 
 /* Estilos para mostrar el correo */
 .email-container p {
@@ -155,10 +152,12 @@
 .text h3::after {
     content: "Contact";
     position: absolute;
+    pointer-events: none;
     top: -120px;/* Desplazamiento vertical de la sombra */
     left: 30px; /* Desplazamiento horizontal de la sombra */
     font-size: 9rem; /* Ajusta el tamaño de la fuente */
     font-weight: bold;
+    z-index: -1;
     color: transparent; /* Hace el texto transparente */
     background-image: repeating-linear-gradient(
         45deg, /* Líneas diagonales a 45 grados */
