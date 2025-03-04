@@ -1,21 +1,3 @@
-/* Estilos generales */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Resetear márgenes y padding */
-.article-header, .article-header * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.section {
-    display: flex;
-    height: 100vh;
-    padding: 0;
-}
 
 /* Barra amarilla vertical */
 .yellow-bar {
@@ -28,7 +10,6 @@ body {
     position: relative; /* Para posicionar el texto correctamente */
     overflow: hidden; /* Para evitar desbordamientos */
 }
-
 
 .yellow-bar span {
     writing-mode: vertical-rl; /* Texto vertical */
@@ -70,12 +51,14 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 4vh;
+    z-index: 10; /* Asegura que la left-side esté por encima de otras secciones */
+
 }
 
 .article-info {
     text-align: left;
-    padding-bottom: 20%;
+    padding-bottom: 25%;
 }
 
 
@@ -95,12 +78,13 @@ body {
     display: flex;
     position: relative;
     align-items: center; /* Centrado vertical */
-    gap: 40px;
+    gap: 2vh;
     background-color: rgba(255, 255, 255, 0.466); /* Fondo blanco */
     padding: 10px 20px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     width: fit-content; /* El ancho se ajusta al contenido */
     padding-left: 10%;
+    line-height: 1.5;
 }
 
 .article-header h4::after{
@@ -142,10 +126,12 @@ body {
     color: #333;
     height: 150px; /* Altura fija */
     overflow-y: auto; /* Scroll si el texto es largo */
-    border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     max-width: 650px;
+    background-color: #c5c5c533;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
 }
 
 
@@ -245,6 +231,7 @@ body {
 .right-content {
     flex: 1; /* Ocupa el espacio restante */
     padding: 10px; /* Espaciado interno */
+    
 }
 
 .right-title {
@@ -256,4 +243,242 @@ body {
     font-size: 14px;
     color: #333;
     line-height: 1.5;
+}
+
+
+
+/* Responsivo para pantallas menores a 1280px: Ocultar el lado derecho */
+@media (max-width: 1280px) {
+    .blog-container {
+        display: flex;
+        flex: 1;
+        gap: 20px;
+        padding: 70px;
+        position: relative;
+    }
+
+    .right-side {
+        position: absolute;
+        right: 7%;
+        top: 15%;
+        display: flex;
+        gap: 20px;
+        height: 62%; /* Altura fija */
+        width: 25%; /* Ancho fijo */
+        overflow-y: auto; /* Habilita el scroll vertical */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+
+    .article-description {
+        font-size: 15px;
+        text-align: center;
+        color: #333;
+        height: 25vh; /* Altura fija */
+        overflow-y: auto; /* Scroll si el texto es largo */
+        border: 1px solid #cccccc00;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 60%;
+    }
+
+    
+    .blog-container {
+        flex-direction: row; /* Mantener la disposición en fila, pero con el lado derecho más pequeño */
+    }
+
+    .left-side {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 11vh;
+        z-index: 10; /* Asegura que la left-side esté por encima de otras secciones */
+
+    }
+
+    .article-info {
+        text-align: left;
+        padding-bottom: 17%;
+    }
+    
+}
+
+/* Pantallas más pequeñas (1024px, 768px) */
+@media (max-width: 1024px) {
+    .right-side {
+        display: none; /* Esconde el lado derecho */
+    }
+
+    .article-info {
+        text-align: left;
+        padding-bottom: 3%;
+    }
+
+    .left-side {
+        display: flex; /* Usar flexbox para centrar el contenido */
+        flex-direction: column; /* Asegura que el contenido esté en columna */
+        justify-content: center; /* Centra verticalmente */
+        text-align: left;
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        width: 100%; /* Ocupa todo el ancho */
+        padding-left: 55vh;
+        z-index: 10; /* Asegura que la left-side esté por encima de otras secciones */
+      
+    }
+
+    .article-title {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .article-subtitle {
+        font-size: 50px;
+        text-align: left;
+        padding-left: -10vh;
+    }
+
+    .article-description {
+        font-size: 14px;
+        width: 150vh;
+        padding-bottom: 7vh;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 55%; /* Carrusel más ancho */
+        max-width: 750px; /* Ancho máximo */
+        margin: 0 0; /* Centrar el carrusel */
+        overflow: hidden;
+        padding: 0px 50px; /* Padding a los lados para las flechas */
+    }
+}
+
+/* Pantallas más pequeñas (1024px, 768px) */
+@media (max-width: 900px) {
+    .right-side {
+        display: none; /* Esconde el lado derecho */
+    }
+
+    .article-info {
+        text-align: left;
+        padding-bottom: 3%;
+    }
+
+    .left-side {
+        display: flex; /* Usar flexbox para centrar el contenido */
+        flex-direction: column; /* Asegura que el contenido esté en columna */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center;
+
+        text-align: center;
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        width: 100%; /* Ocupa todo el ancho */
+        padding-left: 40vh;
+        z-index: 10; /* Asegura que la left-side esté por encima de otras secciones */
+        max-width: 60%;
+    }
+
+    .article-title {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .article-subtitle {
+        font-size: 50px;
+        text-align: left;
+        padding-left: -2vh;
+    }
+
+    .article-description {
+        font-size: 14px;
+        width: 150vh;
+        padding-bottom: 7vh;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 50%; /* Carrusel más ancho */
+        max-width: 750px; /* Ancho máximo */
+        margin: 0 0; /* Centrar el carrusel */
+        overflow: hidden;
+        padding: 0px 50px; /* Padding a los lados para las flechas */
+    }
+}
+
+
+
+
+/* Pantallas extra pequeñas (480px o menos) */
+@media (max-width: 480px) {
+    .right-side {
+        display: none; /* Esconde el lado derecho */
+    }
+
+    .article-info {
+        text-align: left;
+        padding-bottom: 3%;
+        display: none;
+    }
+
+    .left-side {
+        display: flex; /* Usar flexbox para centrar el contenido */
+        flex-direction: column; /* Asegura que el contenido esté en columna */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center;
+
+        text-align: center;
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
+        width: 100%; /* Ocupa todo el ancho */
+        padding-left: 92vh;
+        z-index: 10; /* Asegura que la left-side esté por encima de otras secciones */
+        max-width: 25%;
+    }
+
+    .article-title {
+        display: none;
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .article-subtitle {
+        font-size: 25px;
+        text-align: left;
+        padding-left: -2vh;
+    }
+
+    .article-description {
+        font-size: 14px;
+        width: 150vh;
+        padding-bottom: 7vh;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 50%; /* Carrusel más ancho */
+        max-width: 750px; /* Ancho máximo */
+        margin: 0 0; /* Centrar el carrusel */
+        overflow: hidden;
+        padding: 0px 50px; /* Padding a los lados para las flechas */
+    }
+}
+
+/* Pantallas de móvil (360px, 320px) */
+@media (max-width: 360px) {
+    .article-title {
+        font-size: 20px;
+    }
+
+    .blog-link img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .article-subtitle {
+        font-size: 25px;
+        text-align: left;
+        max-width: 60%;
+    }
+
+    .article-description {
+        font-size: 10px;
+    }
 }

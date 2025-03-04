@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     scroll-behavior: smooth;
     background-image: url('images/Font.jpg');
-    height: 100%; /* Asegura que el body y html ocupen toda la pantalla */
+    height: 100vh; /* Asegura que el body y html ocupen toda la pantalla */
   }
 
   /* Encabezado fijo */
@@ -123,14 +123,12 @@ header nav ul li a:hover::before {
 
   /* Secciones con scroll snap */
   .section {
-    
     height: 100vh;
     scroll-snap-align: start;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* O cualquier otra altura que se desee */
   }
   
   .content {
@@ -217,7 +215,7 @@ header nav ul li a:hover::before {
   
 
 /* Responsivo: Tablets (768px a 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1050px) {
   header {
     padding: 10px 20px; /* Menos padding en móviles */
   }
@@ -270,28 +268,5 @@ header nav ul li a:hover::before {
   }
   header nav ul li a {
     padding: 10px 30px;
-  }
-}
-
-/* Responsivo: Escritorio (más de 1024px) */
-@media (min-width: 1024px) {
-  header {
-      padding: 10px 10%;
-  }
-
-  header nav ul {
-      flex-direction: row;
-  }
-
-  .section {
-      flex-direction: row;
-  }
-
-  .content {
-      flex-direction: row;
-  }
-
-  .text, .image {
-      width: 50%;
   }
 }

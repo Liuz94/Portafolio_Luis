@@ -44,19 +44,7 @@
     object-fit: cover;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .contentContacto {
-        flex-direction: column;
-        height: auto;
-    }
 
-    .text, .image {
-        flex: none;
-        width: 100%;
-        height: auto;
-    }
-}
 
 
 /* Lista de iconos */
@@ -169,4 +157,19 @@
     background-size: 100px 100px; /* Tamaño del patrón */
     background-clip: text; /* Aplicar el fondo solo al texto */
     -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contentContacto {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .text, .image {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
 }
