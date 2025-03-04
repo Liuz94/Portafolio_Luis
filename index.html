@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Luis Remache</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="csscubo.css">
+    <link rel="stylesheet" href="carrusel.css">
+    <link rel="stylesheet" href="StrylesAbout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+
+        <!-- Menu -->
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+         <!-- Logo -->
+         <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+
+       
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        
+        
+
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section id="home" class="section">
+            <div class="content">
+
+                <div class="text"> 
+                    <h1>Luis Remache</h1>
+                    <p>CyberSecurity Enthusiast | Trying Bug Hunter | Learning Malware Development | Engineer | CTF Player</p>
+                </div>
+
+                <div id="cubo-container">
+                    <div class="scene">
+                        <div class="cube">
+                            <!-- Cara Frontal (Blanco) -->
+                            <div class="face front">
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                            </div>
+                            
+                            <!-- Cara Trasera (Blanco) -->
+                            <div class="face back">
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                            </div>
+                            
+                            <!-- Cara Derecha (Blanco) -->
+                            <div class="face right">
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                            </div>
+                            
+                            <!-- Cara Izquierda (Blanco) -->
+                            <div class="face left">
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                            </div>
+                            
+                            <!-- Cara Superior (Blanco) -->
+                            <div class="face top">
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                            </div>
+                            
+                            <!-- Cara Inferior (Blanco) -->
+                            <div class="face bottom">
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                                <div class="sticker"></div><div class="sticker"></div><div class="sticker"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="javascriptcubo.js"></script>
+        
+            </div>
+        </section>
+    
+        <!-- Sección ABOUT -->
+    <section id="about" class="section">
+        <div class="contentAbout">
+            <div class="textAbout">
+                <h2>About Me</h2>
+                <p>¡Hola! Soy Luis Remache, me apasionado de la <strong>ciberseguridad</strong> con un enfoque claro en la resolución de problemas. 
+                    Desdde que comencé a explorar este mundo, he sio finalista en varios <strong>CTF</strong> (Capture The Flag), lo que me ha permitido afinar mis habilidades y 
+                    conocimientos en diferentes áreas de la ciberseguridad. Estos desafíos me han enseñado a pensar de manera crítica, a identificar vulnerabilidades y a aplicar 
+                    técnicas avanzadas de defensa y explotación.</p>
+            </div>
+            <div class="image">
+                <div class="sphere">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Sección BLOG -->
+<section id="blog" class="section">
+
+    <!-- Barra amarilla vertical -->
+    <div class="yellow-bar">
+        <span>REMACHE</span>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="blog-container">
+
+        <!-- Lado izquierdo -->
+        <div class="left-side">
+            <!-- Título y número del artículo -->
+            <div class="article-info">
+                <h2 class="article-title">Artículo 1</h2>
+                <p class="article-number">1/5</p>
+            </div>
+
+            <!-- Título del artículo y enlace al blog -->
+            <div class="article-header">
+                <h3 class="article-subtitle">Título del Artículo 1</h3>
+                <a href="blog.html" class="blog-link">
+                    <img src="images/blog-icon.png" alt="Ir al blog">
+                </a>
+            </div>
+
+            <!-- Explicación del artículo -->
+            <div class="article-description">
+                <p>
+                    Descripción del artículo. Puede ser un texto largo que requiera scroll.
+                </p>
+            </div>
+
+            <!-- Carrusel -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Artículo 1 -->
+                    <div class="carousel-item" data-index="0">
+                        <img src="images/Miniaturas_Articulos/Artboard 1.png" alt="Artículo 1">
+                        <div class="overlay"></div>
+                    </div>
+                    <!-- Artículo 2 -->
+                    <div class="carousel-item" data-index="1">
+                        <img src="images/Miniaturas_Articulos/Artboard 2.png" alt="Artículo 2">
+                        <div class="overlay"></div>
+                    </div>
+                    <!-- Artículo 3 -->
+                    <div class="carousel-item" data-index="2">
+                        <img src="images/Miniaturas_Articulos/Artboard 3.png" alt="Artículo 3">
+                        <div class="overlay"></div>
+                    </div>
+                    <!-- Artículo 4 -->
+                    <div class="carousel-item" data-index="3">
+                        <img src="images/Miniaturas_Articulos/Artboard 4.png" alt="Artículo 4">
+                        <div class="overlay"></div>
+                    </div>
+                    <!-- Artículo 5 -->
+                    <div class="carousel-item" data-index="4">
+                        <img src="images/Miniaturas_Articulos/Artboard 5.png" alt="Artículo 5">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <!-- Botones de navegación -->
+                    <button class="carousel-button prev">&#10094;</button>
+                    <button class="carousel-button next">&#10095;</button>
+            </div>
+        </div>
+
+
+        <!-- Lado derecho -->
+        <div class="right-side">
+            <div class="right-content">
+                <h3 class="right-title">Explicación del Artículo</h3>
+                <p class="right-description">
+    Aquí puedes poner un texto más detallado que explique el artículo.
+    Puedes agregar párrafos, listas, imágenes, etc.
+    <!-- Más contenido aquí -->
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <!-- Sección CONTACT -->
+    <section id="contact" class="section">
+        <div class="contentContacto">
+            <div class="text">
+                <h3>Contacto</h3>
+                <p>
+                    ¡Hola! Soy Luis Remache, me apasionado de la <strong>ciberseguridad</strong> con un enfoque claro en la resolución de problemas. 
+                    Desdde que comencé a explorar este mundo, he sio finalista en varios <strong>CTF</strong> (Capture The Flag), lo que me ha permitido afinar mis habilidades y 
+                    conocimientos en diferentes áreas de la ciberseguridad. Estos desafíos me han enseñado a pensar de manera crítica, a identificar vulnerabilidades y a aplicar 
+                    técnicas avanzadas de defensa y explotación. </p>
+            </div>
+            <div class="image">
+                <img src="images/contact-image.jpg" alt="Imagen de Contacto">
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+        <script src="CarruselJS.js"></script>
+    </main>
+</body>
+</html>

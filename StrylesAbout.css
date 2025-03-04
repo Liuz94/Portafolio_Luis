@@ -1,0 +1,134 @@
+/* Esfera */
+/* Contenedor principal */
+.contentAbout {
+    display: flex;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%;
+    align-items: flex-start; /* Subir los elementos */
+    padding-top: 30%; /* Ajuste opcional para más control */
+    max-width: 1500px;
+    gap: 30px;
+
+}
+
+.textAbout {
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del espacio disponible */
+    text-align: left; /* Alinea el contenido a la izquierda */
+    padding-left: 20px; /* Agrega el espacio de padding deseado */
+    box-sizing: border-box; /* Para que el padding se cuente dentro del ancho del contenedor */
+    line-height: 2; /* Ajusta la altura de la línea para reducir el espaciado */
+}
+
+
+/* Estilos para el título */
+.textAbout h2 {
+    position: relative; /* Permite posicionar el pseudo-elemento */
+    font-size: 4rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina el margen por defecto */
+    text-align: left; /* Alineación del texto a la izquierda */
+    line-height: 0.75; /* Ajusta la altura de la línea para reducir el espaciado */
+    z-index: 1; /* Asegura que el texto esté por encima de la sombra */
+}
+
+/* Efecto de sombra con pseudo-elemento */
+.textAbout h2::after {
+    content: "About Me"; /* Duplica el texto */
+    position: absolute;
+    align-items: left;
+    width: 800px;
+    top: -80px; /* Desplazamiento vertical de la sombra */
+    left: -10px; /* Desplazamiento horizontal de la sombra */
+    font-size: 10rem; /* Tamaño de la sombra más grande */
+    z-index: -1; /* Coloca la sombra detrás del texto */
+    filter: blur(0.5px); /* Desenfoque ligero */
+    color: transparent; /* Hacemos el texto transparente */
+    background-image: repeating-linear-gradient(
+        45deg, /* Líneas diagonales a 45 grados */
+        rgba(0, 0, 0, 0.356), /* Color de las líneas con transparencia */
+        rgba(0, 0, 0, 0.171) 0.1px, /* Grosor de las líneas */
+        transparent 4px, /* Espacio transparente entre líneas */
+        transparent 4px /* Separación entre líneas */
+    );
+
+    background-size: 100px 100px; /* Tamaño del patrón */
+    background-clip: text; /* Aplicar el fondo solo al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+
+}
+
+/* Estilos para el párrafo */
+.textAbout p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #666; /* Color del texto */
+    margin-top: 20px; /* Espacio entre el título y el párrafo */
+    text-align:left;
+}
+
+
+/* Texto (lado izquierdo) */
+.textAbout {
+    width: 50%; /* Mitad izquierda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Imagen (lado derecho) */
+.image {
+    width: 50%; /* Mitad derecha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de la esfera */
+.sphere {
+    z-index: 1; /* Asegura que el texto esté por encima de la sombra */
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #ffffff, #d8d8d8); /* Gradiente para simular una esfera */
+    border-radius: 50%; /* Forma circular */
+    position: relative;
+    animation: rotate 10s infinite linear, distortBorder 2s infinite alternate;
+    box-shadow: 0 0 50px rgba(134, 134, 134, 0.5), /* Sombra exterior */
+                0 0 100px rgba(114, 114, 114, 0.3); /* Sombra exterior más difusa */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    margin-top: 4vh; /* Sube los elementos */
+}
+
+
+/* Animación de rotación */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animación de distorsión de bordes */
+@keyframes distortBorder {
+    0% {
+        border-radius: 50% 50% 50% 50%;
+    }
+    25% {
+        border-radius: 60% 40% 70% 30%;
+    }
+    50% {
+        border-radius: 40% 60% 30% 70%;
+    }
+    75% {
+        border-radius: 70% 30% 60% 40%;
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+    }
+}

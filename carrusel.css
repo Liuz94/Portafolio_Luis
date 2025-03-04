@@ -1,0 +1,235 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Resetear márgenes y padding */
+.article-header, .article-header * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    display: flex;
+    height: 100vh;
+    padding: 0;
+}
+
+/* Barra amarilla vertical */
+.yellow-bar {
+    width: 7%; /* Más ancha */
+    height: 100vh; /* Ocupa toda la altura de la sección */
+    background-color: #FDFD1F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Para posicionar el texto correctamente */
+    overflow: hidden; /* Para evitar desbordamientos */
+}
+
+
+.yellow-bar span {
+    writing-mode: vertical-rl; /* Texto vertical */
+    transform: rotate(0deg); /* Girar 180 grados */
+    font-size: 1250%; /* Texto más grande */
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    text-align: center; /* Centrar el texto horizontalmente */
+    width: 100%; /* Ocupar todo el ancho de la barra */
+    padding: 20px 20px; /* Espaciado vertical */
+
+    color: transparent; /* Hacemos el texto transparente */
+    background-image: repeating-linear-gradient(
+        45deg, /* Líneas diagonales a 45 grados */
+        rgba(0, 0, 0, 0.116), /* Color de las líneas con transparencia */
+        rgba(0, 0, 0, 0.123) 1px, /* Grosor de las líneas */
+        transparent 1px, /* Espacio transparente entre líneas */
+        transparent 3px /* Separación entre líneas */
+    );
+    background-size: 500px 500px; /* Tamaño del patrón */
+    background-clip: text; /* Aplicar el fondo solo al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+
+}
+
+
+/* Contenedor principal */
+.blog-container {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 70px;
+}
+
+
+/* Lado izquierdo */
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-info {
+    text-align: left;
+    padding-bottom: 20%;
+}
+
+.article-title {
+    font-size: 25px;
+    margin: 0;
+}
+
+.article-number {
+    font-size: 15px;
+    padding-left: 5%;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.article-header {
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    gap: 40px;
+    background-color: white; /* Fondo blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    width: fit-content; /* El ancho se ajusta al contenido */
+    padding-left: 10%;
+}
+
+.article-subtitle {
+    font-size: 30px; /* Aumentamos el tamaño de la fuente */
+    margin: 0;
+    padding-left: 4%; /* Agregamos padding izquierdo */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.blog-link img {
+    width: 70px;
+    height: 70px;
+}
+
+.article-description {
+    font-size: 15px;
+    color: #333;
+    height: 150px; /* Altura fija */
+    overflow-y: auto; /* Scroll si el texto es largo */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 650px;
+}
+
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    width: 76%; /* Carrusel más ancho */
+    max-width: 750px; /* Ancho máximo */
+    margin: 0 0; /* Centrar el carrusel */
+    overflow: hidden;
+    padding: 0px 50px; /* Padding a los lados para las flechas */
+}
+
+.carousel {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;  /* Animación suave */
+    padding: 0 20px; /* Padding interno para los artículos */
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.333% - 10px); /* Mostrar 3 artículos */
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+.carousel-item img {
+    max-width: 205; /* Ancho máximo más grande */
+    max-height: 77px; /* Alto máximo más grande */
+    width: auto;
+    height: auto;
+    border: 2px solid #ccc; /* Borde alrededor de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+    object-fit: contain; /* Ajustar la imagen sin distorsión */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 0, 0.432); /* Amarillo con transparencia */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px; /* Bordes redondeados */
+    pointer-events: none; /* Evitar que el overlay bloquee interacciones */
+}
+
+.carousel-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Botones de navegación */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10; /* Asegurar que los botones estén por encima del carrusel */
+}
+
+.carousel-button.prev {
+    left: 3%; /* Mover el botón previo a la izquierda del carrusel */
+}
+
+.carousel-button.next {
+    right: 1%; /* Mover el botón siguiente a la derecha del carrusel */
+}
+
+
+
+/* Lado derecho */
+.right-side {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 700px; /* Altura fija */
+    width: 450px; /* Ancho fijo */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.right-content {
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 10px; /* Espaciado interno */
+}
+
+.right-title {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.right-description {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}

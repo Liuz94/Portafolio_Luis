@@ -1,0 +1,286 @@
+/* Contenedor principal */
+.content {
+    display: flex;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%;
+    align-items: flex-start; /* Subir los elementos */
+    padding-top: 40%; /* Ajuste opcional para más control */
+    max-width: 1400px;
+
+}
+
+/* Texto (lado izquierdo) */
+.text {
+    width: 50%; /* Mitad izquierda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    line-height: 2; /* Ajusta la altura de la línea para reducir el espaciado */
+}
+
+
+/* Estilos para el título */
+.text h1 {
+    position: relative; /* Permite posicionar el pseudo-elemento */
+    font-size: 4rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina el margen por defecto */
+    text-align: left; /* Alineación del texto a la izquierda */
+    line-height: 0.75; /* Ajusta la altura de la línea para reducir el espaciado */
+    z-index: 1; /* Asegura que el texto esté por encima de la sombra */
+}
+
+/* Efecto de sombra con pseudo-elemento */
+.text h1::after {
+    content: "Luis Remache"; /* Duplica el texto */
+    position: absolute;
+    align-items: left;
+    width: 800px;
+    top: -200px; /* Desplazamiento vertical de la sombra */
+    left: -10px; /* Desplazamiento horizontal de la sombra */
+    font-size: 10rem; /* Tamaño de la sombra más grande */
+    z-index: -1; /* Coloca la sombra detrás del texto */
+    filter: blur(0.5px); /* Desenfoque ligero */
+    color: transparent; /* Hacemos el texto transparente */
+    background-image: repeating-linear-gradient(
+        45deg, /* Líneas diagonales a 45 grados */
+        rgba(0, 0, 0, 0.356), /* Color de las líneas con transparencia */
+        rgba(0, 0, 0, 0.171) 0.1px, /* Grosor de las líneas */
+        transparent 4px, /* Espacio transparente entre líneas */
+        transparent 4px /* Separación entre líneas */
+    );
+
+    background-size: 100px 100px; /* Tamaño del patrón */
+    background-clip: text; /* Aplicar el fondo solo al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+
+}
+
+/* Estilos para el párrafo */
+.text p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #666; /* Color del texto */
+    margin-top: 10px; /* Espacio entre el título y el párrafo */
+}
+
+
+/*CUBO*/
+
+#cubo-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Mover perspective aquí */
+    margin-top: 0px; /* Compensa la altura del header */
+    margin-top: -5%; /* Sube los elementos */
+    z-index: 1; /* Asegura que el texto esté por encima de la sombra */
+
+}
+
+.scene {
+    /* position: relative; */
+    transform-style: preserve-3d;
+    transform: rotateX(35deg) rotateY(35deg);
+    animation: autoRotate 10s infinite linear;
+    width: 310px; /* Tamaño base del cubo (350px - 40px) */
+    height: 310px; /* Tamaño base del cubo (350px - 40px) */
+    transform-origin: center;
+    transition: width 0.5s ease, height 0.5s ease; /* Transición suave */
+}
+
+.cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: scale(1); /* Escala inicial */
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0,0,0,0.3);
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+.sticker {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+    border: 1px dashed rgba(211, 153, 77, 0.438); /* Línea entrecortada */
+}
+
+/* Degradado para cada color del cubo */
+.front .sticker { 
+    background: radial-gradient(circle, #ecf0f1 0%, #ffffff 70%, #ffffff 100%); /* Blanco con degradado */
+}
+.back .sticker  { 
+    background: radial-gradient(circle, #ecf0f1 0%, #ffffff 70%, white 100%); /* Blanco con degradado */
+}
+.right .sticker { 
+    background: radial-gradient(circle, #ecf0f1 0%, #ffffff 70%, white 100%); /* Blanco con degradado */
+}
+.left .sticker  { 
+    background: radial-gradient(circle, #ecf0f1 0%, #ffffff 70%, white 100%); /* Blanco con degradado */
+}
+.top .sticker   { 
+    background: radial-gradient(circle, #ecf0f1 0%, #ffffff 70%, white 100%); /* Blanco con degradado */
+}
+.bottom .sticker{ 
+    background: radial-gradient(circle, #ecf0f1 0%, #ffffff 75%, #ffffff 30%); /* Blanco con degradado */
+}
+
+/* Posicionamiento 3D */
+.front  { transform: translateZ(155px); } /* Mitad del tamaño del cubo (310px / 2) */
+.back   { transform: rotateY(180deg) translateZ(155px); }
+.right  { transform: rotateY(90deg) translateZ(155px); }
+.left   { transform: rotateY(-90deg) translateZ(155px); }
+.top    { transform: rotateX(90deg) translateZ(155px); }
+.bottom { transform: rotateX(-90deg) translateZ(155px); }
+
+@keyframes autoRotate {
+    0% { transform: rotateX(35deg) rotateY(35deg) rotateZ(0deg); }
+    100% { transform: rotateX(35deg) rotateY(35deg) rotateZ(360deg); }
+}
+
+/* Escalados responsivos reducidos en 40px */
+@media (max-width: 1920px) {
+    .scene {
+        width: 360px; /* 400px - 40px */
+        height: 360px;
+    }
+    .front  { transform: translateZ(180px); }
+    .back   { transform: rotateY(180deg) translateZ(180px); }
+    .right  { transform: rotateY(90deg) translateZ(180px); }
+    .left   { transform: rotateY(-90deg) translateZ(180px); }
+    .top    { transform: rotateX(90deg) translateZ(180px); }
+    .bottom { transform: rotateX(-90deg) translateZ(180px); }
+}
+
+@media (max-width: 1440px) {
+    .scene {
+        width: 310px; /* 350px - 40px */
+        height: 310px;
+    }
+    .front  { transform: translateZ(155px); }
+    .back   { transform: rotateY(180deg) translateZ(155px); }
+    .right  { transform: rotateY(90deg) translateZ(155px); }
+    .left   { transform: rotateY(-90deg) translateZ(155px); }
+    .top    { transform: rotateX(90deg) translateZ(155px); }
+    .bottom { transform: rotateX(-90deg) translateZ(155px); }
+}
+
+@media (max-width: 1366px) {
+    .scene {
+        width: 260px; /* 300px - 40px */
+        height: 260px;
+    }
+    .front  { transform: translateZ(130px); }
+    .back   { transform: rotateY(180deg) translateZ(130px); }
+    .right  { transform: rotateY(90deg) translateZ(130px); }
+    .left   { transform: rotateY(-90deg) translateZ(130px); }
+    .top    { transform: rotateX(90deg) translateZ(130px); }
+    .bottom { transform: rotateX(-90deg) translateZ(130px); }
+}
+
+@media (max-width: 1280px) {
+    .scene {
+        width: 240px; /* 280px - 40px */
+        height: 240px;
+    }
+    .front  { transform: translateZ(120px); }
+    .back   { transform: rotateY(180deg) translateZ(120px); }
+    .right  { transform: rotateY(90deg) translateZ(120px); }
+    .left   { transform: rotateY(-90deg) translateZ(120px); }
+    .top    { transform: rotateX(90deg) translateZ(120px); }
+    .bottom { transform: rotateX(-90deg) translateZ(120px); }
+}
+
+@media (max-width: 1024px) {
+    .scene {
+        width: 210px; /* 250px - 40px */
+        height: 210px;
+    }
+    .front  { transform: translateZ(105px); }
+    .back   { transform: rotateY(180deg) translateZ(105px); }
+    .right  { transform: rotateY(90deg) translateZ(105px); }
+    .left   { transform: rotateY(-90deg) translateZ(105px); }
+    .top    { transform: rotateX(90deg) translateZ(105px); }
+    .bottom { transform: rotateX(-90deg) translateZ(105px); }
+}
+
+@media (max-width: 768px) {
+    .scene {
+        width: 160px; /* 200px - 40px */
+        height: 160px;
+    }
+    .front  { transform: translateZ(80px); }
+    .back   { transform: rotateY(180deg) translateZ(80px); }
+    .right  { transform: rotateY(90deg) translateZ(80px); }
+    .left   { transform: rotateY(-90deg) translateZ(80px); }
+    .top    { transform: rotateX(90deg) translateZ(80px); }
+    .bottom { transform: rotateX(-90deg) translateZ(80px); }
+}
+
+@media (max-width: 600px) {
+    .scene {
+        width: 110px; /* 150px - 40px */
+        height: 110px;
+    }
+    .front  { transform: translateZ(55px); }
+    .back   { transform: rotateY(180deg) translateZ(55px); }
+    .right  { transform: rotateY(90deg) translateZ(55px); }
+    .left   { transform: rotateY(-90deg) translateZ(55px); }
+    .top    { transform: rotateX(90deg) translateZ(55px); }
+    .bottom { transform: rotateX(-90deg) translateZ(55px); }
+}
+
+@media (max-width: 480px) {
+    .scene {
+        width: 80px; /* 120px - 40px */
+        height: 80px;
+    }
+    .front  { transform: translateZ(40px); }
+    .back   { transform: rotateY(180deg) translateZ(40px); }
+    .right  { transform: rotateY(90deg) translateZ(40px); }
+    .left   { transform: rotateY(-90deg) translateZ(40px); }
+    .top    { transform: rotateX(90deg) translateZ(40px); }
+    .bottom { transform: rotateX(-90deg) translateZ(40px); }
+}
+
+@media (max-width: 360px) {
+    .scene {
+        width: 60px; /* 100px - 40px */
+        height: 60px;
+    }
+    .front  { transform: translateZ(30px); }
+    .back   { transform: rotateY(180deg) translateZ(30px); }
+    .right  { transform: rotateY(90deg) translateZ(30px); }
+    .left   { transform: rotateY(-90deg) translateZ(30px); }
+    .top    { transform: rotateX(90deg) translateZ(30px); }
+    .bottom { transform: rotateX(-90deg) translateZ(30px); }
+}
+
+@media (max-width: 320px) {
+    .scene {
+        width: 40px; /* 80px - 40px */
+        height: 40px;
+    }
+    .front  { transform: translateZ(20px); }
+    .back   { transform: rotateY(180deg) translateZ(20px); }
+    .right  { transform: rotateY(90deg) translateZ(20px); }
+    .left   { transform: rotateY(-90deg) translateZ(20px); }
+    .top    { transform: rotateX(90deg) translateZ(20px); }
+    .bottom { transform: rotateX(-90deg) translateZ(20px); }
+}
