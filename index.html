@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="csscubo.css">
     <link rel="stylesheet" href="carrusel.css">
     <link rel="stylesheet" href="StrylesAbout.css">
+    <link rel="stylesheet" href="StyleContact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4053f4dfbe.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Encabezado -->
@@ -144,7 +146,7 @@
 
             <!-- Título del artículo y enlace al blog -->
             <div class="article-header">
-                <h3 class="article-subtitle">Título del Artículo 1</h3>
+                <h4 class="article-subtitle">Título del Artículo 1</h4>
                 <a href="blog.html" class="blog-link">
                     <img src="images/blog-icon.png" alt="Ir al blog">
                 </a>
@@ -196,7 +198,7 @@
         <!-- Lado derecho -->
         <div class="right-side">
             <div class="right-content">
-                <h3 class="right-title">Explicación del Artículo</h3>
+                <h5 class="right-title">Explicación del Artículo</h5>
                 <p class="right-description">
     Aquí puedes poner un texto más detallado que explique el artículo.
     Puedes agregar párrafos, listas, imágenes, etc.
@@ -211,15 +213,67 @@
     <section id="contact" class="section">
         <div class="contentContacto">
             <div class="text">
-                <h3>Contacto</h3>
-                <p>
-                    ¡Hola! Soy Luis Remache, me apasionado de la <strong>ciberseguridad</strong> con un enfoque claro en la resolución de problemas. 
-                    Desdde que comencé a explorar este mundo, he sio finalista en varios <strong>CTF</strong> (Capture The Flag), lo que me ha permitido afinar mis habilidades y 
-                    conocimientos en diferentes áreas de la ciberseguridad. Estos desafíos me han enseñado a pensar de manera crítica, a identificar vulnerabilidades y a aplicar 
-                    técnicas avanzadas de defensa y explotación. </p>
+
+                <h3>Contact</h3>
+                <p>¡Hola! Soy Luis Remache, me puedes contactar por cualquier de estos lugares. </p>
+
+                       <!-- Redes Sociales -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/luis-remache/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/luizxz94" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/Liuz94" class="github" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+        <!-- Mostrar correo -->
+        <div class="email-container">
+            <p>Mi correo electrónico: <a href="mailto:todavianohay@gmail.com">todavianohay@gmail.com</a></p>
+        </div>
             </div>
             <div class="image">
-                <img src="images/contact-image.jpg" alt="Imagen de Contacto">
+
+                <div class="container">
+                    <!-- Contenedor de imagen con código ASCII -->
+                    <div class="image-container">
+                        <!-- Arte ASCII dentro de la imagen -->
+                        <div class="ascii-art">
+                            <pre>
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⡿⠋⠉⠉⠉⠩⠛⡻⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠟⠛⠿⠿⢿⣿⣿⣿⢯⣾⣧⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠁⠂⠉⠻⢿⠿⠛⠉⠀⠀⠠⠤⢤⣤⣴⣦⡄⠀⠈⢩⣿⣿⣿⡟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⣶⣶⣶⣿⣶⣦⣍⡛⠿⠀⠀⣾⣿⣿⣿⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⠢⢍⡛⠻⢿⣿⣿⣿⣷⣤⢰⣿⣿⣿⡧⣿⠈⢿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢬⣵⣶⣵⣀⠹⡳⣦⣚⠈⠛⠿⣿⢸⣿⣿⣿⢳⡿⠀⠈⢿⡿⢟⣯⣽⣶⣿⣏⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠁⣼⡻⣿⡿⣯⢕⡬⡙⢦⣀⠀⠀⠀⢸⣿⣿⡿⣯⠀⢀⠀⣴⣾⣿⣿⣿⣿⡿⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⡆⣼⣹⠀⣿⣗⡻⣿⣞⡷⡻⣜⢷⣌⠓⢦⣀⠈⠃⠀⠀⠈⠀⠜⠺⢨⣶⣷⣿⣿⣿⣇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⣸⢳⣽⡿⡄⢏⣽⣾⡾⣿⣼⠹⣿⣯⡻⣦⠠⢈⠑⠦⢝⡳⣶⣦⡀⠀⠈⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⡀⣠⣿⣿⡇⡿⡇⡜⣷⣻⣿⢷⡏⠶⣈⠫⣌⢷⡆⣿⢧⢠⢀⠈⠉⠛⠻⠶⢦⣤⣀⠑⠪⢝⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⡱⠁⢿⢿⣷⠇⢘⣻⡔⠱⢽⣏⢰⣸⠻⠛⠂⠁⠁⢸⣸⢺⡞⢈⠚⠒⠄⠀⠀⠀⠈⠁⠀⠀⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣾⣀⠘⣾⢧⡆⠸⠟⠉⠀⡀⣍⠊⡃⣴⡀⠀⠀⡔⢖⡅⣿⢣⣧⡆⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⢀⡇⠟⣶⠀⢶⡀⠀⣻⣶⣧⣸⣭⣭⣤⣤⣶⣿⠣⣱⣡⠝⢠⢳⢧⠀⠰⡠⠀⠀⠀⠀⣀⣀⣠⣤⣤⣴⣾⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⠟⡼⠁⠘⠈⠳⣐⠶⢾⣧⣿⣿⣿⣿⣿⣿⣿⣯⣶⠏⠉⠀⣸⣷⠟⠎⠀⠀⠈⢷⡠⣛⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡶⠖⠀⠀⠀⠀⠀⠀⠸⣿⣿⡋⣡⣤⠶⣼⣿⣿⣿⣷⡿⣠⢔⠝⠁⠀⠀⠀⠀⢀⡆⣬⡑⡷⡝⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⠟⣩⣶⠶⣶⣦⡌⠙⢿⢁⠀⠀⠀⠀⠐⠀⠀⠀⠈⠛⠿⣶⣶⣾⡿⢟⣵⣿⢏⣪⠁⡞⠀⢀⠀⠀⣀⣠⣿⣵⣿⡿⣀⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠃⢰⣿⣿⣭⣾⣿⠃⠀⠀⢈⠀⠀⣺⡤⡀⠀⣐⢾⣦⡀⠀⠀⠉⠁⣠⣿⣿⣿⢶⣿⡄⡃⠶⣾⣄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠈⠪⣛⠻⠻⠏⠀⠀⠀⠈⡗⠀⠑⠛⠛⠒⠀⠝⠋⠺⠾⠀⠰⠃⣿⣿⣿⣿⣷⣿⣷⡑⠾⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⡀⠀⠀⠈⠛⠃⠉⠉⠁⠀⢀⣠⣴⣶⣶⠒⠀⠀⠠⠀⣠⠀⣀⣤⣶⣿⣿⣿⠿⣛⣯⣽⣶⣶⣶⡎⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣷⣄⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⡋⠀⠀⠀⢀⡼⠃⢚⡿⢿⣿⢿⣫⣷⣿⣿⣿⡿⡟⡏⡡⢔⡒⣥⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⡷⢀⣠⣤⣤⣶⣿⣿⣿⣿⣿⡟⠀⠀⠀⡇⠘⠀⢀⣮⠍⣢⣴⣿⣿⣿⢿⢻⢱⠠⣳⣡⠦⠉⣁⣠⡄⠀⠉⠛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⢳⠁⠀⡠⢋⣴⣿⠟⠛⣛⢋⠂⣁⠌⠖⠋⢈⣠⣤⣾⣿⣿⣿⡀⠀⠀⠀⠐⣤⡉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣇⠘⣿⣿⣿⣿⣿⣿⣿⡟⠁⢀⣤⣀⠀⠀⠀⣚⣛⢛⣛⡋⡤⢭⣒⣥⣶⠏⣠⣶⣿⣿⣿⣿⣿⣿⣿⣇⢀⣤⣴⣾⣿⣿⣆⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣦⠈⢿⣿⣿⣿⣿⡟⠀⢰⣿⣿⡿⠀⣴⣿⣷⣶⣶⣶⣾⣿⣿⣿⣿⣏⣾⣿⡟⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣷⡀⢻⣿⣿⣿⡇⠀⠸⣿⣿⣟⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣸⣿⣯⡑⢹⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⣿⣿⣿⠏⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⡇⠀⠀⢿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⡸⣿⣿⣿⠀⣿⣿⣿⣿⣿⣿⣿⡼⠿⢿⣿⡿⠋⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠀⣿⣿⣿⡇⠀⠀⢈⣿⣿⢿⣿⡟⠀⠘⢟⠿⣿⣿⣿⣿⣿⣧⠻⠟⠋⠀⢸⣿⣿⣿⣿⣿⡿⣇⠀⠀⠈⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⡿⠃⣼⣿⣿⣿⡇⠀⠀⠈⣿⡿⣏⢿⣿⡀⠀⠈⢢⣈⢻⣿⣿⣿⣿⡏⠀⠀⠀⢤⣍⣭⡍⢶⠸⠸⠏⢀⡐⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⠟⢀⣾⣿⣿⣿⣿⣷⠀⠠⢄⡸⣿⢫⠌⠻⡷⣄⠀⠀⠙⢷⣿⣿⣿⣟⠀⢀⠀⡔⠐⣿⠮⠵⣶⣓⣿⣿⣾⣳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⡿⠃⣰⣿⣿⣿⣿⣿⣿⣿⠀⠀⠹⣶⡽⣇⠫⢶⣄⠈⠻⣶⣬⣮⣻⣿⣿⢀⢞⠁⣾⣿⣧⠉⠀⢨⣾⣿⠿⠿⢧⡸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⡿⢁⣾⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠘⡿⣿⣆⠡⢻⣿⣶⣮⡻⣿⣿⣿⠃⡨⠀⣴⣿⣿⣿⠁⠀⠊⠁⠀⣒⣿⣿⣷⢸⣿⣿⣿⣏⣐⣯⣾⣀⣘⣋⣃⣃⣘⣹
+⠃⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⢆⡀⠘⠝⡟⠂⠀⢻⣿⣿⣿⣿⣿⣿⠶⠉⠀⣸⣿⣿⣿⣧⠀⠲⣿⣿⣿⣿⣿⡿⠁⣽⣿⣿⣧⣤⣤⣤⣤⣤⣤⣤⣤⣤⣼⠀⠀
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

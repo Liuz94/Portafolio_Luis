@@ -78,6 +78,7 @@ body {
     padding-bottom: 20%;
 }
 
+
 .article-title {
     font-size: 25px;
     margin: 0;
@@ -92,14 +93,37 @@ body {
 
 .article-header {
     display: flex;
+    position: relative;
     align-items: center; /* Centrado vertical */
     gap: 40px;
-    background-color: white; /* Fondo blanco */
+    background-color: rgba(255, 255, 255, 0.466); /* Fondo blanco */
     padding: 10px 20px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     width: fit-content; /* El ancho se ajusta al contenido */
     padding-left: 10%;
 }
+
+.article-header h4::after{
+    content: "BLOG"; /* Duplica el texto */
+    position: absolute;
+    top: -250px; /* Desplazamiento vertical de la sombra */
+    left: 85px; /* Desplazamiento horizontal de la sombra */
+    font-size: 20rem; /* Ajusta el tamaño de la fuente */
+    font-weight: bold;
+    color: transparent; /* Hace el texto transparente */
+    z-index: -1; /* Coloca la sombra detrás del texto */
+    background-image: repeating-linear-gradient(
+        45deg, /* Líneas diagonales a 45 grados */
+        rgba(0, 0, 0, 0.356), /* Color de las líneas con transparencia */
+        rgba(0, 0, 0, 0.171) 0.1px, /* Grosor de las líneas */
+        transparent 4px, /* Espacio transparente entre líneas */
+        transparent 4px /* Separación entre líneas */
+    );
+    background-size: 100px 100px; /* Tamaño del patrón */
+    background-clip: text; /* Aplicar el fondo solo al texto */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores WebKit */
+}
+
 
 .article-subtitle {
     font-size: 30px; /* Aumentamos el tamaño de la fuente */
