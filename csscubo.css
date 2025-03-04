@@ -211,14 +211,14 @@
         width: 100%;
         text-align: center;
         padding: 0;
-        margin-bottom: 300px; /* Reduce la separación con el cubo */
+        margin-bottom: 20vh; /* Reduce la separación con el cubo */
     }
 
     #cubo-container {
         width: 100%;
         position: absolute;
         order: 1; /* Asegura que el cubo esté debajo */
-        margin-top: 520px; /* Sube el cubo más cerca del texto */
+        margin-top: 60vh; /* Sube el cubo más cerca del texto */
     }
 
     .front  { transform: translateZ(120px); }
