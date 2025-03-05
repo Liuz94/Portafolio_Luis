@@ -258,7 +258,7 @@
         max-height: 300px;
         position: absolute;
         order: 1; /* Asegura que el cubo esté debajo */
-        margin-top: 43vh; /* Sube el cubo más cerca del texto */
+        margin-top: 45vh; /* Sube el cubo más cerca del texto */
     }
 
 
@@ -315,6 +315,15 @@
         width: 110px; /* 120px - 40px */
         height: 110px;
     }
+
+    #cubo-container {
+        max-height: 300px;
+        position: absolute;
+        order: 1; /* Asegura que el cubo esté debajo */
+        margin-top: 55vh; /* Sube el cubo más cerca del texto */
+    }
+
+
     .front  { transform: translateZ(55px); }
     .back   { transform: rotateY(180deg) translateZ(55px); }
     .right  { transform: rotateY(90deg) translateZ(55px); }
@@ -332,13 +341,13 @@
     .content {
         flex-direction: column;
         align-items: center;
-        padding-top: 500px; /* Reduce el espacio superior */
+        padding-top: 25vh; /* Reduce el espacio superior */
         padding-left: 50px;
     }
 
     .text {
         width: 100%;
-        text-align: center;
+        text-align: left;
         padding: 0;
         margin-bottom: 0px; /* Reduce la separación con el cubo */
     }
