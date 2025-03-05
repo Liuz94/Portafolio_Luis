@@ -1,8 +1,10 @@
+
 /* Reset general */
 html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: "Public Sans", sans-serif;
     background-image: url('images/Font.jpg');
     height: 100vh; /* Asegura que el body y html ocupen toda la pantalla */
   }

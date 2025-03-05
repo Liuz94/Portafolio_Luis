@@ -8,7 +8,6 @@
     box-shadow: 0 4px 50px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     z-index: 1; /* Coloca la sombra detrás del texto */
-
 }
 
 .text, .image {
@@ -123,7 +122,7 @@
     white-space: pre-wrap; /* Mantener los saltos de línea y los espacios */
     overflow-y: auto; /* Si el contenido es muy grande, agrega scroll */
     padding: 0px;
-    font-size: 10px; /* Ajusta el tamaño según sea necesario */
+    font-size: 10px !important; /* Ajusta el tamaño según sea necesario */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -160,16 +159,240 @@
 }
 
 
-/* Responsivo */
-@media (max-width: 768px) {
+
+
+@media (max-width: 1440px) {
     .contentContacto {
-        flex-direction: column;
-        height: 100vh;
+        width: 85%;
+        height: 75vh;
     }
 
-    .text, .image {
-        flex: none;
-        width: 100%;
-        height: auto;
+    .ascii-art {
+
+        font-size: 10px !important; /* Ajusta el tamaño según sea necesario */
+
+    }
+
+    .text h3 {
+        font-size: 4rem !important;
+    }
+
+    .social-links a {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 1366px) {
+    
+    .ascii-art {
+        font-size: 10px !important; /* Ajusta el tamaño según sea necesario */
+
+    }
+
+    .text h3 {
+        font-size: 4rem !important;
+    }
+
+    .social-links a {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+
+    .ascii-art {
+        font-size: 9px !important; /* Ajusta el tamaño según sea necesario */
+
+    }
+
+    .text h3 {
+        padding-top: 80px;
+        font-size: 4rem !important;
+
+    }
+
+    .text{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .text p{
+
+        padding-left: 7vh;
+    }
+
+    .text h3::after {
+        top: -30px;/* Desplazamiento vertical de la sombra */
+        left: 30px; /* Desplazamiento horizontal de la sombra */
+
+    }
+
+    .social-links a {
+        text-align: center;
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contentContacto {
+        width: 90%;
+        height: 60vh;
+    }
+
+    .ascii-art {
+        font-size: 7px !important; /* Ajusta el tamaño según sea necesario */
+
+    }
+
+    .text h3 {
+        font-size: 2rem;
+    }
+
+    .social-links a {
+        font-size: 50px;
+    }
+
+    .social-links{
+        padding-left: 5vh;
+
+    }
+
+    .ascii-art {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentContacto {
+        width: 90%;
+        height: 60vh;
+    }
+
+    .text h3 {
+        padding-top: 0px;
+        font-size: 3rem !important;
+
+    }
+
+    .text p{
+
+        padding-left: 4vh;
+    }
+
+    .text p a{
+        
+        padding-left: 1.5vh;
+    }
+
+    .social-links a {
+        font-size: 50px;
+    }
+    
+    .social-links{
+        padding-left: 1vh;
+
+    }
+
+    .ascii-art {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contentContacto {
+        width: 90%;
+        height: 70vh;
+    }
+
+    .text h3 {
+        padding-top: 0px;
+        font-size: 3rem !important;
+
+    }
+
+    .text p{
+
+        padding-left: 2vh;
+        max-width: 100%;
+    }
+
+    .text p a{
+        
+        padding-left: 6vh;
+    }
+
+    .social-links a {
+        font-size: 50px;
+    }
+    
+    .social-links{
+        padding-left: 1vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentContacto {
+        height: 65vh;
+        width: 75%;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Asegura que el texto se centre */
+    }
+    .social-links a {
+        font-size: 50px;
+    }
+
+    .ascii-art {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .contentContacto {
+        height: 65vh;
+        width: 90%;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Asegura que el texto se centre */
+    }
+    .social-links a {
+        font-size: 50px;
+    }
+
+    .ascii-art {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    contentContacto {
+        height: 65vh;
+        width: 95%;
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Asegura que el texto se centre */
+    }
+    .social-links a {
+        font-size: 50px;
+    }
+
+    .ascii-art {
+        display: none;
     }
 }
