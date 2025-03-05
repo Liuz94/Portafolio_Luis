@@ -267,6 +267,7 @@
     .contentContacto {
         width: 90%;
         height: 60vh;
+        position: relative;
     }
 
     .text h3 {
@@ -291,6 +292,8 @@
     
     .social-links{
         padding-left: 1vh;
+        position: absolute;
+        top: 40vh;
 
     }
 
@@ -303,6 +306,7 @@
     .contentContacto {
         width: 90%;
         height: 70vh;
+        position: relative;
     }
 
     .text h3 {
@@ -328,6 +332,8 @@
     
     .social-links{
         padding-left: 1vh;
+        position: absolute;
+        top: 49vh;
     }
 }
 
@@ -335,6 +341,7 @@
     .contentContacto {
         height: 65vh;
         width: 75%;
+        position: relative;
     }
 
     .text{
@@ -344,9 +351,18 @@
         align-items: center; /* Centra horizontalmente */
         text-align: center; /* Asegura que el texto se centre */
     }
+
     .social-links a {
         font-size: 50px;
+
     }
+
+
+    .social-links{
+        position: absolute;
+        top: 37vh;
+    }
+    
 
     .ascii-art {
         display: none;
